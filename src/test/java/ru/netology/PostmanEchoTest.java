@@ -1,3 +1,5 @@
+package ru.netology;
+
 import org.junit.jupiter.api.Test;
 
 import static io.restassured.RestAssured.given;
@@ -15,7 +17,7 @@ public class PostmanEchoTest {
 
                 .then()
                 .statusCode(200)
-                .body("data", equalTo("some data"))
+                .body("data", equalTo("some value"))
         ;
     }
 
@@ -31,7 +33,7 @@ public class PostmanEchoTest {
 
                 .then()
                 .statusCode(200)
-                .body("data", equalTo("Test message"))
+                .body("data", equalTo("Wrong test message"))
         ;
 
     }
